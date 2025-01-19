@@ -1,0 +1,25 @@
+[debug] [2025-01-19T22:21:14.286Z] ----------------------------------------------------------------------
+[debug] [2025-01-19T22:21:14.288Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\migue\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting:github
+[debug] [2025-01-19T22:21:14.289Z] CLI Version:   13.29.1
+[debug] [2025-01-19T22:21:14.289Z] Platform:      win32
+[debug] [2025-01-19T22:21:14.289Z] Node Version:  v20.17.0
+[debug] [2025-01-19T22:21:14.289Z] Time:          Sun Jan 19 2025 15:21:14 GMT-0700 (Mountain Standard Time)
+[debug] [2025-01-19T22:21:14.289Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-19T22:21:14.360Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-19T22:21:14.360Z] > authorizing via signed-in user (miguelvega354@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\migue\OneDrive\Desktop\MITxPRO\UNIT_24_Continuous_integration_Continuous_deployment_and_DevOps\RA24.3
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
