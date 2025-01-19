@@ -1,17 +1,16 @@
-name: npm test
-on: [push]
+name: Debug Jest Permissions
+
+on: push
+
 jobs:
-  test:
+  debug:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node_version: [18.x]
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 18.x
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 18.x
       - run: npm install
-      - run: npm run build --if-present
-      - run: npm test
+      - run: ls -l node_modules/.bin # List the contents of the .bin directory
+      - run: file node_modules/.bin/jest # Check the file type and permissions of jest
