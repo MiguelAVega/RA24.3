@@ -1,31 +1,16 @@
-name: Node.js CI
+name: Debug Jest Permissions
 
-on:
-  push:
-    branches: [ "main" ] # or your main branch name
-  pull_request:
-    branches: [ "main" ]
+on: push
 
 jobs:
-  build:
+  debug:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x, 20.x] # Test on multiple Node.js versions if needed
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 18.x
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Cache Node.js modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('package-lock.json') }} # Include node version in key
-          restore-keys: |
-            ${{ runner.os }}-node-${{ matrix.node-version }}-
-            ${{ runner.os }}-node-
-      - run: npm ci # Use npm ci for clean installs
-      - run: npm run build --if-present
-      - run: npm test
+          node-version: 18.x
+      - run: npm install
+      - run: ls -l node_modules/.bin # List the contents of the .bin directory
+      - run: file node_modules/.bin/jest # Check the file type and permissions of jest
